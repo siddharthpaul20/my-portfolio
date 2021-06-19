@@ -1,0 +1,64 @@
+SIDDHART PORTFOLIO NOTES
+
+1) npx create-react-app siddharth-portfolio
+
+2) …or create a new repository on the command line
+echo "# my-portfolio" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/siddharthpaul20/my-portfolio.git
+git push -u origin main
+
+3) create boilder code by deleting
+	setepTest.js, serviceWorker.js, logo.png, app.test.js
+	Delete reference of above files to remove error
+	
+	in the public folder, logo, manifest.json
+	open index.html (for deleting references of deleted items)
+	remove lines having reference to logos file and manifest.json files
+	you can change the favicon.png by updating its reference with the required icon in the in link line of index.html
+	
+	Rename the title in the index.html
+	
+	Delete the boiler code inside return of App.js
+	Empty App.css completely.
+	
+4) to install react-bootstrap bootstrap
+
+	npm install react-bootstrap bootstrap
+
+5) now in the index.html file we need to import react-bootstrap links
+
+	<!-- Google fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet" />
+     <!-- React bootstrap link -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+     <script src="https://kit.fontawesome.com/440c4dadc2.js" crossorigin="anonymous"></script>
+   
+   above title tag
+   
+6) install styled-components
+	npm install --save styled-components
+	
+7) in the index.js file
+	import { ThemeProvider } from 'styled-components';
+	
+	wrap your component inside this theme provider, we also need to pass theme to themeProvider
+	ReactDOM.render(
+	  <ThemeProvider theme={theme}>
+		<React.StrictMode>
+		  <App />
+		</React.StrictMode>
+	  </ThemeProvider>,
+	  document.getElementById('root')
+	);
+	
+	So in the themes folder, create theme.js file
+	this file includes all the common properties, that you want to use acroos your app.
+	in the theme folder in the theme.js file
+	export const theme = {
+	  primary: "#0b0c10",
+	  textColor: "#66fcf1"
+	};
