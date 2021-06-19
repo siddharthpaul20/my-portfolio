@@ -1,0 +1,68 @@
+Part 2 Notes
+
+1) Copy the asset folder from github repo
+2) Create a folder my-navbar in the components folder
+	create file mynavbar.component.jsx and mynavbar.style.css
+3) Go to https://react-bootstrap.github.io/components/navbar/ for boiler code of Navbar
+
+	we are not using any Nav.dropdown, so we can remove it.
+	
+import React from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Logo from "../../assets/icons/logow.webp";
+import "./mynavbar.style.css";
+
+const MyNavbar = () => {
+    return (
+        <>
+           <Navbar fixed="top" collapseOnSelect expand="md" variant="dark" className="animate-navbar nav-theme justify-content-between">
+                <Navbar.Brand href="#home">
+                    <img className="logo" src={Logo} alt="Siddharth Paul" />
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="ml-auto">
+                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="#about">About</Nav.Link>
+                        <Nav.Link href="#skills">Skills</Nav.Link>
+                        <Nav.Link href="#experience">Experience</Nav.Link>
+                        <Nav.Link href="#projects">Projects</Nav.Link>
+                        <Nav.Link href="#contact">Contact</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar> 
+        </>
+    )
+}
+
+export default MyNavbar;
+
+And call the above component in the App.js
+
+4) Import the logo from the asset folder
+	and change the className="mr-auto" to className="ml-auto", to shift all the options on the right side
+	
+	copy the below content in the css file of this component
+	.logo {
+    width: 25%;
+  }
+  
+  .nav-theme {
+    background-color: #101018f8;
+    font-size: 20px;
+  }
+  
+  .animate-navbar {
+    box-shadow: 1px 1px 1px #222;
+    animation: moveDown 0.5s ease-in-out;
+  }
+  
+  @keyframes moveDown {
+    from {
+      transform: translateY(-5rem);
+    }
+    to {
+      transform: translateY(0rem);
+    }
+  }
