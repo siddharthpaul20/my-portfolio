@@ -1,3 +1,25 @@
+Part4 Notes About Section
+
+For now we will be working on pages folder.
+1) npm i react-parallax
+	npm i react-reveal
+2) Create a folder named about in the pages folder and create a component and style files in it.
+	about.component.jsx and about.style.css
+	we make use of react-bootstrap/images and react-bootstrap/button
+	
+.about {
+    background-color: transparent;
+    font-size: 1.1em;
+  }
+  
+  .profile {
+    max-width: 18em;
+  }
+  
+  .my-details {
+    background-color: rgba(255, 255, 255, 0.747);
+  }
+  
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -5,7 +27,6 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Profile from '../../assets/img/profile/profile.webp';
 import Button from 'react-bootstrap/Button';
-
 import "./about.style.css";
 
 const About = () => {
@@ -28,11 +49,11 @@ const About = () => {
                                 Hi there! I am <strong>&nbsp;Siddharth Paul</strong>
                                 <br />A passionate programmer, born and brought up in India. I am a Backend Developer with Java, SpringBoot, Hibernate, and HSQL as my tech stack.
                                 <br />
-                                In 2020, I successfully completed my engineering with specialization in 'Computer Engineering'.
+                                In 2020, I successfully completed my Engineering with specialization in 'Computer Engineering'.
                                 <br />
-                                My goal is always driven towards providing amazing experience with the best level of quality of my service.
+                                Working with the clients, my goal is always driven towards providing amazing experience with the best level of quality and service to them.
                                 <br />
-                                I love learning about new technologies, what problems are they solving and how can I use them to build better and scalable products.
+                                I love learning about new technologies, what problems are they solving and How can I use them to build better and scalable products.
                                 <br /> <br />
                             </Row>
                             <Row>
@@ -75,3 +96,38 @@ const About = () => {
 }
 
 export default About
+
+
+3) Now apply parallax in the App.js file
+import './App.css';
+import MyNavbar from "./components/my-navbar/mynavbar.component";
+import MyCarousal from './components/my-carousal/my-carousal.component';
+import TitleMessage from './components/title-message/title-message.component';
+import About from './pages/about/about.component';
+import Container from "react-bootstrap/Container";
+
+import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
+import { Parallax } from "react-parallax";
+import backgroundImg from "./assets/img/parallex/background.webp";
+
+function App() {
+  return (
+    <div className="App" style={{ position: "relative" }}>
+      <MyNavbar />
+      <MyCarousal />
+      <TitleMessage />
+      <div>
+        <Parallax blur={{ min: -30, max: 30 }} bgImage={backgroundImg} bgImageAlt="Background image" strength={-200}>
+          <Container className="container-box rounded">
+            <Fade duration={500}>
+              <About />
+            </Fade>
+          </Container>
+        </Parallax>
+      </div>
+    </div>
+  );
+}
+
+export default App;
