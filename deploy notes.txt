@@ -1,0 +1,25 @@
+Part9 Notes: Deploying react app on github page
+
+1) in the react application, go to package.json and the "homepage" property like below
+"homepage": "https://siddharthpaul20.github.io/my-portfolio",
+
+2) inside scripts tag, add the property, "predeploy" and "deploy" above "start" property, like below
+
+"scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+	
+3) Install gh-pages by following command
+npm i gh-pages
+
+4) then execute the below command
+npm run deploy
+
+5) if the site is not live at url https://siddharthpaul20.github.io/my-portfolio,
+then do one more step
+
+go to the github website to your repo my-portfolio, under the settings tab, choose theme to set, and set Cayman theme, these will resolve 404 error issue.
+
+In case anyone gets stuck with v3.1.0, the cache directory is now at node_modules/.cache/gh-pages https://github.com/tschaub/gh-pages/blob/v3.1.0/changelog.md#v310
+
+delete gh-pages folder in above path ,in case of error gh-pages branch already exists

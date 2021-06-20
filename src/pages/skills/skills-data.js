@@ -1,7 +1,5 @@
 import L_HTML5 from "../../assets/img/skills/html-5.svg";
 import L_CSS3 from "../../assets/img/skills/css3.svg";
-import L_SASS from "../../assets/img/skills/sass-1.svg";
-import L_BOOTSTRAP from "../../assets/img/skills/bootstrap-4.svg";
 import L_REACT from "../../assets/img/skills/react.svg";
 import L_REDUX from "../../assets/img/skills/redux.svg";
 import L_REACT_ROUTER from "../../assets/img/skills/react-router.svg";
@@ -10,19 +8,18 @@ import L_REACT_BOOTSTRAP from "../../assets/img/skills/react-bootstrap.svg";
 import L_STYLED_COMPONENTS from "../../assets/img/skills/styled-components.svg";
 import L_NODE_JS from "../../assets/img/skills/nodejs.svg";
 import L_EXPRESS from "../../assets/img/skills/express.svg";
-import L_DJANGO from "../../assets/img/skills/django.svg";
-import L_FLASK from "../../assets/img/skills/flask.svg";
 import L_MONGODB from "../../assets/img/skills/mongodb.svg";
-import L_POSTGRESQL from "../../assets/img/skills/postgresql.svg";
 import L_MSSQL from "../../assets/img/skills/mssql.svg";
 import L_GIT from "../../assets/img/skills/git-icon.svg";
 import L_HEROKU from "../../assets/img/skills/heroku.svg";
-import L_DIGITAL_OCEAN from "../../assets/img/skills/digital-ocean.svg";
 import L_GITHUB_PAGES from "../../assets/img/skills/github.svg";
 import L_JAVASCRIPT from "../../assets/img/skills/javascript.svg";
-import L_TYPESCRIPT from "../../assets/img/skills/typescript.svg";
-import L_GOLANG from "../../assets/img/skills/go-6.svg";
-import L_PYTHON from "../../assets/img/skills/python.svg";
+import L_SPRING_BOOT from "../../assets/img/skills/springboot.svg";
+import L_JAVA from "../../assets/img/skills/java.svg";
+import L_C_PLUS_PLUS from "../../assets/img/skills/cplusplus.svg";
+import L_HIBERNATE from "../../assets/img/skills/hibernate.svg";
+import L_HSQL from "../../assets/img/skills/hypersql.svg";
+import L_NETLIFY from "../../assets/img/skills/netlify.svg";
 
 export const skills = {
     frontend: [
@@ -43,12 +40,6 @@ export const skills = {
             imgAltText: "JavaScript",
             imgSrc: L_JAVASCRIPT,
             skillName: "JavaScript",
-          },
-          {
-            link: "https://getbootstrap.com/",
-            imgAltText: "Bootstrap",
-            imgSrc: L_BOOTSTRAP,
-            skillName: "Bootstrap",
           },
           {
             link: "https://reactjs.org/",
@@ -90,19 +81,31 @@ export const skills = {
 
     backend: [
     {
+      link: "https://spring.io/projects/spring-boot",
+      imgAltText: "SpringBoot",
+      imgSrc: L_SPRING_BOOT,
+      skillName: "SpringBoot",
+    },
+    {
+      link: "https://hibernate.org/",
+      imgAltText: "Hibernate",
+      imgSrc: L_HIBERNATE,
+      skillName: "Hibernate",
+    },
+    {
       link: "https://nodejs.org/en/",
       imgAltText: "Node.js",
       imgSrc: L_NODE_JS,
       skillName: "Node.js",
-    },
-    {
-      link: "https://expressjs.com/",
-      imgAltText: "Express",
-      imgSrc: L_EXPRESS,
-      skillName: "Express",
-    },
+    }
   ],
   hostingPlatforms: [
+    {
+      link: "https://netlify.app/",
+      imgAltText: "Netlify",
+      imgSrc: L_NETLIFY,
+      skillName: "Netlify",
+    },
     {
       link: "https://www.heroku.com/",
       imgAltText: "Heroku",
@@ -118,25 +121,25 @@ export const skills = {
   ],
   programmingLanguages: [
     {
-      link: "https://www.javascript.com/",
-      imgAltText: "JavaScript",
-      imgSrc: L_JAVASCRIPT,
-      skillName: "JavaScript",
+      link: "https://www.cplusplus.com/",
+      imgAltText: "C++",
+      imgSrc: L_C_PLUS_PLUS,
+      skillName: "C++",
     },
     {
-      link: "https://www.typescriptlang.org/",
-      imgAltText: "TypeScript",
-      imgSrc: L_TYPESCRIPT,
-      skillName: "TypeScript",
-    },
-    {
-      link: "https://www.python.org/",
-      imgAltText: "Python",
-      imgSrc: L_PYTHON,
-      skillName: "Python",
-    },
+      link: "https://www.java.com/en/",
+      imgAltText: "Java",
+      imgSrc: L_JAVA,
+      skillName: "Java",
+    }
   ],
   databases: [
+    {
+      link: "http://hsqldb.org/",
+      imgAltText: "H-SQL",
+      imgSrc: L_HSQL,
+      skillName: "H-SQL",
+    },
     {
       link: "https://www.microsoft.com/en-us/sql-server/sql-server-2019",
       imgAltText: "MS-SQL",
