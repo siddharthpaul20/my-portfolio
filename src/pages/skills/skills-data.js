@@ -20,6 +20,7 @@ import L_C_PLUS_PLUS from "../../assets/img/skills/cplusplus.svg";
 import L_HIBERNATE from "../../assets/img/skills/hibernate.svg";
 import L_HSQL from "../../assets/img/skills/hypersql.svg";
 import L_NETLIFY from "../../assets/img/skills/netlify.svg";
+import L_Firebase from "../../assets/img/skills/firebase.svg";
 
 export const skills = {
     frontend: [
@@ -111,6 +112,12 @@ export const skills = {
       imgAltText: "Heroku",
       imgSrc: L_HEROKU,
       skillName: "Heroku",
+    },
+    {
+      link: "https://firebase.google.com/",
+      imgAltText: "Firebase",
+      imgSrc: L_Firebase,
+      skillName: "Firebase",
     },
     {
       link: "https://pages.github.com/",
