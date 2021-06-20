@@ -12,6 +12,11 @@ import { Parallax } from "react-parallax";
 import backgroundImg from "./assets/img/parallex/background.webp";
 import Experience from './pages/experience/experience.component';
 import ProjectTimeline from './components/projects-timeline/projects-timeline.component';
+import ContactForm from './pages/contact-form/contact-form.component';
+import FooterPanel from './components/footer/footer.component';
+
+import Particles from 'react-particles-js';
+import { particlesOptions } from "./particlesOptions";
 
 function App() {
   return (
@@ -19,6 +24,7 @@ function App() {
       <MyNavbar />
       <MyCarousal />
       <TitleMessage />
+      <Particles className="particles particles-box" params={particlesOptions} />
       <div>
         <Parallax blur={{ min: -30, max: 30 }} bgImage={backgroundImg} bgImageAlt="Background image" strength={-200}>
           <Container className="container-box rounded">
@@ -55,6 +61,17 @@ function App() {
           </Slide>
         </Container>
       </div>
+      {/* Contact Me section */}
+      <div>
+        <Container className="container-box rounded">
+          <Fade duration={500}>
+            <hr />
+            <ContactForm />
+          </Fade>
+        </Container>
+      </div>
+      <hr />
+      <FooterPanel />
     </div>
   );
 }
