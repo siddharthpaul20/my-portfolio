@@ -11,6 +11,7 @@ import Slide from "react-reveal/Slide";
 import { Parallax } from "react-parallax";
 import backgroundImg from "./assets/img/parallex/background.webp";
 import Experience from './pages/experience/experience.component';
+import ProjectTimeline from './components/projects-timeline/projects-timeline.component';
 
 function App() {
   return (
@@ -43,6 +44,15 @@ function App() {
             <hr />
             <Experience />
           </Fade>
+        </Container>
+      </div>
+      {/* Projects Timeline section */}
+      <div>
+        <Container className="container-box rounded">
+          <Slide bottom duration={500}>
+            <hr />
+            <ProjectTimeline />
+          </Slide>
         </Container>
       </div>
     </div>
