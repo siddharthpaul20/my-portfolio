@@ -32,14 +32,11 @@ const Experience = () => {
                                     <br/>
                                     <strong> Description </strong>
                                     <ul className="text-left">
-                                    <li><strong>Developed &amp; enhanced</strong> multiple features with customizability option across web application.</li>
-                                    <li><strong>Developed</strong> automation system to create SQL bulk query scripts that 
-                                        increased efficiency by 80% and decreased working hours from 4 hours to 30 mins per task.
-                                    </li>
-                                    <li><strong>Provided</strong> application maintenance while working as `Production Support`. 
-                                    </li>
-                                    <li><strong>Performed</strong> CRUD operations on multiple databases to load/ remove data according 
-                                    to the business requirements.</li>
+                                        ⭐Working on a Business Intelligence tool, <strong>"Klera"</strong> that access data from across multiple data silos, compute insights, and write-back to end systems.
+                                        <br />🚩Identified and discussed product features with business stakeholders and product owners, performed feasibility analysis, and created high-level and low-level designs for features to be implemented.
+                                        <br />🚩Work on improving the existing services and developing new ones to provide users with a better product experience.
+                                        <br />🚩Improved performance of query execution in the database that is being used so as to improve the loading time of data on the frontEnd from 8min time to under 1min time.
+                                        <br />🚩In a short span of time became an important contributor to the Team's progress and helped in the load balancing of the team.
                                     {/* <li><strong>Co-created</strong> React Document used as a guide for new developers.</li> */}
                                     </ul>
                                 </Card.Text>
