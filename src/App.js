@@ -10,6 +10,7 @@ import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 import { Parallax } from "react-parallax";
 import backgroundImg from "./assets/img/parallex/background.webp";
+import Experience from './pages/experience/experience.component';
 
 function App() {
   return (
@@ -29,8 +30,18 @@ function App() {
       {/* Skills section */}
       <div>
         <Container className="container-box rounded">
-          <Fade duration={500}>
+          <Slide bottom duration={500}>
+            <hr />
             <Skills />
+          </Slide>
+        </Container>
+      </div>
+      {/* Experience section */}
+      <div>
+        <Container className="container-box rounded">
+          <Fade duration={500}>
+            <hr />
+            <Experience />
           </Fade>
         </Container>
       </div>
