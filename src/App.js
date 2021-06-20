@@ -24,7 +24,7 @@ function App() {
       <MyNavbar />
       <MyCarousal />
       <TitleMessage />
-      <Particles className="particles particles-box" params={particlesOptions} />
+      <Particles className="particles particles-box" params={particlesOptions}  />
       <div>
         <Parallax blur={{ min: -30, max: 30 }} bgImage={backgroundImg} bgImageAlt="Background image" strength={-200}>
           <Container className="container-box rounded">
