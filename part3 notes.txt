@@ -1,0 +1,138 @@
+Part3 Notes Add Carousel
+
+1) install typewriter-effect
+	npm i typewriter-effect
+2) created component title-message
+	create folder title-message and file title-message.component.jsx and paste below content
+
+import React from 'react';
+import styled from "styled-components";
+import Typewriter from 'typewriter-effect';
+
+const MyTitleMessage = styled.h1`
+  position: absolute;
+  width: 100%;
+  top: 22rem;
+  z-index: 1;
+  margin-top: -125px;
+  text-align: center;
+  strong {
+    font-size: 1.25em;
+  }
+  div {
+    color: ${props => props.theme.textColor};
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    font-weight: 100;
+    letter-spacing: 7px;
+    .main {
+      font-size: 50px;
+    }
+    .sub {
+      font-size: 27px;
+      letter-spacing: 2px;
+    }
+  }
+`;
+
+const TitleMessage = () => {
+    return (
+        <MyTitleMessage>
+            <div className="titleMessage">
+                <div className="heading">
+                    <div className="main text-center mb-3">
+                        Hi, I am
+                        <br />
+                        <span>
+                            <strong>Siddharth Paul</strong>
+                        </span>
+                    </div>
+                    <div className="sub">
+                    <Typewriter
+                        options={{
+                            strings: ['Software Engineer', 'Competitive Programmer', 'Learner'],
+                            autoStart: true,
+                            loop: true,
+                        }}
+                    />
+                    </div> 
+                </div>
+            </div>
+        </MyTitleMessage>
+    )
+}
+
+export default TitleMessage
+
+3) created component scroll-down
+	create folder scroll-down and file scroll-down.component.jsx
+import React from 'react';
+import styled from "styled-components";
+
+const MyScroll = styled.div`
+  position: relative;
+  z-index: 1;
+  bottom: 1.6em;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: transparent;
+  font-weight: bold;
+  text-shadow: 1px 1px #45a29e;
+  color: #fff;
+  .turn {
+    cursor: pointer;
+    transform: rotate(90deg);
+  }
+`;
+
+
+const ScrollDown = () => {
+    return (
+        <MyScroll>
+        <div className="turn">
+            <span> &gt; </span>
+        </div>
+        </MyScroll>
+    )
+}
+
+export default ScrollDown
+
+4) go to site https://react-bootstrap.github.io/components/carousel/
+	created component my-carousel
+	create folder my-carousel and file my-carousel.component.jsx and my-carousel.style.css
+	
+.custom-img {
+    height: 100vh;
+    object-fit: cover;
+  }
+	
+import React from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import Slide1 from "../../assets/img/carousal/slide1.webp";
+import Slide2 from "../../assets/img/carousal/slide2.webp";
+import Slide3 from "../../assets/img/carousal/slide3.webp";
+import ScrollDown from '../scroll-down/scroll-down.component';
+
+import "./my-carousal.style.css";
+
+const MyCarousal = () => {
+    return (
+        <div id="home">
+            <Carousel controls={false} indicators interval={2500} pause={false}>
+                <Carousel.Item>
+                    <img className="d-block w-100 custom-img" src={Slide1} alt="First slide" />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img className="d-block w-100 custom-img" src={Slide2} alt="Second slide" />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img className="d-block w-100 custom-img" src={Slide3} alt="Third slide" />
+                </Carousel.Item>
+            </Carousel>
+            <ScrollDown />
+        </div>
+    )
+}
+
+export default MyCarousal
